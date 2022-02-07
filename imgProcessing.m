@@ -3,8 +3,12 @@
 % Distributed under the terms of the GNU GPLv3 License
 % Written 02/04/2022
 
+% Execute the main function
 main;
 
+% grayBW
+% Takes an image as the argument
+% Converts the image from grayscale to black and white based on a user-defined threshold
 function grayBW(img)
     % Prompt for threshold value within 0 and 255
     thresh = -1;
@@ -41,6 +45,9 @@ function grayBW(img)
     figure(2); imshow(nimg);
 end
 
+% brightness
+% Takes an image as the argument
+% Adjusts the brightness of the image based on a user-defined level
 function brightness(img)
     % Get brightness percent from user
     level = -1;
@@ -59,6 +66,9 @@ function brightness(img)
     end
 end
 
+% crop
+% Takes an image as the argument
+% Crops the image based on user-defined coordinates within the image
 function crop(img)
     % Define image size
     [rows, cols] = size(img);
@@ -85,6 +95,7 @@ function crop(img)
     figure(2); imshow(uint8(nimg));
 end
 
+% main
 function main
     % Load picture
     filename = input('Image filename: ');
